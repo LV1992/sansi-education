@@ -1,0 +1,17 @@
+# dubbo doc http://dubbo.apache.org/zh-cn/
+dubbo:
+  application:
+    id: consummer
+    name: dubbo-consummer-web
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: -1
+  registry:
+    id: consummer
+    address: zookeeper://zk1.d.xqcx.com:2181?backup=zk2.d.xqcx.com:2181,zk3.d.xqcx.com:2181
+  # Base packages to scan Dubbo Components (e.g., @Service, @Reference)
+  scan:
+    basePackages: com.sansi.education.web.controller
+server:
+  port: 8080

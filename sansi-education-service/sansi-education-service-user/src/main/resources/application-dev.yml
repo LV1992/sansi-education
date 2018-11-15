@@ -1,0 +1,31 @@
+# dubbo doc http://dubbo.apache.org/zh-cn/
+dubbo:
+  application:
+    id: user-provider
+    name: dubbo-provider-user
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: -1
+  registry:
+    id: user-provider
+    address: zookeeper://zk1.d.xqcx.com:2181?backup=zk2.d.xqcx.com:2181,zk3.d.xqcx.com:2181
+  # Base packages to scan Dubbo Components (e.g., @Service, @Reference)
+  scan:
+    basePackages: com.sansi.education.user.service
+test:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://mysql.t.xqcx.com:3306/test?useUnicode=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true&amp;zeroDateTimeBehavior=convertToNull
+    username: xq
+    password: 123456
+    initialSize: 10
+    maxActive: 30
+    minIdle: 20
+    maxWait: 30000
+    timeBetweenEvictionRunsMillis: 10000
+    validationQuery: SELECT 'x'
+    testWhileIdle: true
+logging:
+  level:
+    com.sansi.education.user.mapper: debug
