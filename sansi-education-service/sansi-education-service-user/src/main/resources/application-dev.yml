@@ -16,8 +16,8 @@ dubbo:
 test:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://mysql.t.xqcx.com:3306/test?useUnicode=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true&amp;zeroDateTimeBehavior=convertToNull
-    username: xq
+    url: jdbc:mysql://*.*.*:3306/test?useUnicode=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true&amp;zeroDateTimeBehavior=convertToNull
+    username: ***
     password: 123456
     initialSize: 10
     maxActive: 30
